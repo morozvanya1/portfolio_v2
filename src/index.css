@@ -69,6 +69,12 @@ select {
   font: inherit;
 }
 
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+}
+
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -126,4 +132,79 @@ footer .icon {
 
 .menu-footer:hover > p, .active-2 {
   background-color: rgb(254,217,122);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px;
+}
+
+.content-element {
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.content-element:hover {
+  background-color: rgb(35, 39, 44);
+}
+
+.content-element:hover h2 {
+  color: rgb(250, 248, 246);
+}
+
+.content-element:hover p {
+  color: rgb(189, 192, 194);
+}
+
+.inner-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.content-element .icon {
+  font-size: 23px;
+  color: black;
+}
+
+.content-header {
+  padding: 25px;
+  border-radius: 20px;
+
+  background-color: rgb(250, 248, 246);
+}
+
+.content-body {
+  padding-left: 20px;
+}
+
+.content-body h2 {
+  color: black;
+}
+
+.Wardrobe .content-body h2 {
+  font-weight: 500;
+}
+
+.content-body p {
+  font-size: 16px;
+  color: black;
+
+  text-transform: lowercase;
+}
+
+.arrow {
+  padding: 15px 15px 15px 10px;
+  margin-left: auto;
+
+  color: rgb(189, 192, 194);
+  font-size: 23px;
 }

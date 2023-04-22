@@ -1,0 +1,56 @@
+.Wardrobe {
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba(243, 243, 243);
+  overflow: scroll;
+}
+
+.Wardrobe header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 20px;
+}
+
+.Wardrobe .left {
+  font-size: 23px;
+  color: black;
+}
+
+.Wardrobe h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.Wardrobe .bag {
+  font-size: 23px;
+}
+
+.Wardrobe .categories-item {
+  margin: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Wardrobe .categories-item div {
+  width: 50%;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Wardrobe .categories-item .active {
+  border: 1.5px solid black;
+  border-radius: 20px;
+}
