@@ -1,6 +1,7 @@
 .App {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100vh;
 
   background-color: rgba(243, 243, 243);
   overflow: scroll;
@@ -10,18 +11,18 @@
   padding: 40px 20px 0 20px;
 }
 
-.App .header {
+.App .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.App .header b {
+.App .main-header b {
   font-weight: 800;
   font-size: 30px;
 }
 
-.App .header img {
+.App .main-header img {
   width: 75px;
   height: 75px;
   border-radius: 75px;

@@ -7,6 +7,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  background-color: rgba(243, 243, 243);
+}
+
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
@@ -139,6 +143,7 @@ footer .icon {
   flex-direction: column;
 
   margin: 20px;
+  margin-bottom: 0;
 }
 
 .content-element {
@@ -168,6 +173,10 @@ footer .icon {
 .inner-icon {
   width: 23px;
   height: 23px;
+}
+
+.content-header img {
+  width: 40px;
 }
 
 .content-element .icon {
@@ -206,5 +215,28 @@ footer .icon {
   margin-left: auto;
 
   color: rgb(189, 192, 194);
+  font-size: 23px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.header .left {
+  font-size: 23px;
+  color: black;
+}
+
+.header h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.header .bag {
   font-size: 23px;
 }

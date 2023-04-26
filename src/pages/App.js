@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="header">
+        <div className="main-header">
           <b>Морозов Иван</b>
           <img alt="" />
         </div>
