@@ -12,7 +12,7 @@ function Cards({d}) {
         {d && d.map((v, k) => (
           <div className="content-item" key={k}>
             <div className="content-img">
-              <img src={v} alt={"image-" + "0"} />
+              <img src={v} alt={"image-" + {k}} />
               <div className="content-like">
                 <FontAwesomeIcon icon={faHeart} className="like-heart" />
               </div>

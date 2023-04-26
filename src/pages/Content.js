@@ -26,7 +26,7 @@ function Content() {
   const d = location.state === null ? "" : location.state.d;
   const tshirtImg = [tshirt1, tshirt2, tshirt3, tshirt4, tshirt5, tshirt6, tshirt7, tshirt8, tshirt9, tshirt10, tshirt11, tshirt12, tshirt13];
   var arr;
-  if (d == "Футболки") {
+  if (d === "Футболки") {
     arr = tshirtImg;
   }
 
