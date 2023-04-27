@@ -23,18 +23,23 @@ import tshirt13 from "../img/photo_13_2023-04-26_14-12-57.jpg";
 
 function Content() {
   const location = useLocation();
-  const d = location.state === null ? "" : location.state.d;
+  const all = location.state === null ? "" : location.state.all;
+  const h = location.state === null ? "" : location.state.h;
+  const d = location.state === null ? "" : location.state.d === undefined ? h : location.state.d;
   const tshirtImg = [tshirt1, tshirt2, tshirt3, tshirt4, tshirt5, tshirt6, tshirt7, tshirt8, tshirt9, tshirt10, tshirt11, tshirt12, tshirt13];
   var arr;
+  console.log(h);
   if (d === "Футболки") {
     arr = tshirtImg;
+  } else {
+    arr = all;
   }
 
   return (
     <div className="Content">
       {d && <Header d={d} ic={[faAngleLeft, faFilter]} l={"/wardrobe"} />}
 
-      <Cards d={arr}/>
+      <Cards d={arr} h={d}/>
 
     </div>
   );
