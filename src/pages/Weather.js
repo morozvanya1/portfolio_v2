@@ -8,7 +8,7 @@ function Weather() {
   function getWeather() {
     const q = document.getElementById("city").value;
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${q}&APPID=0330b77c780de1eab5e21f76ad787628&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${q}&APPID=0330b77c780de1eab5e21f76ad787628&units=metric`
     ).then((resp) =>
       resp.json().then((resp) => {
         const temp = Math.ceil(resp.main.temp) + " °C";
