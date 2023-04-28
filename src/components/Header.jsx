@@ -10,7 +10,7 @@ function Header({ d, ic, l }) {
                 <FontAwesomeIcon icon={ic[0]} className="left" />
             </Link>
             <h3>{d}</h3>
-            <FontAwesomeIcon icon={ic[1]} className="bag" />
+            {ic[1] !== undefined ? <FontAwesomeIcon icon={ic[1]} className="bag" /> : <p></p>}
         </div>
     )
 }

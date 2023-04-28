@@ -5,12 +5,13 @@ import {
     faBus,
     faShirt,
     faRightFromBracket,
+    faCloud
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 
 function Footer() {
-    const links = ['/', '/wardrobe', '/routes', '/exit'];
-    const icons = [faHouse, faShirt, faBus, faRightFromBracket];
+    const links = ['/', '/wardrobe', '/routes', '/weather', '/exit'];
+    const icons = [faHouse, faShirt, faBus, faCloud, faRightFromBracket];
 
     React.useEffect(() => {
         const path = window.location.pathname;
