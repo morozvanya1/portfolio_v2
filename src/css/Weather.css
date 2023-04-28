@@ -36,7 +36,7 @@
 
 .weather-results {
   display: none;
-  margin: 60px 20px 20px 20px;
+  margin: 40px 20px 20px 20px;
   padding: 20px;
 
   border-radius: 20px;
@@ -66,11 +66,55 @@
   font-size: 30px;
 }
 
-/* <div className="weather-result-temp">
-          <p>Погода на сегодня</p>
-          <b id="weather-result-temp"></b>
-        </div>
-        <div className="weather-result-feels-like" id="weather-result-feels-like">
-          <p>Ощущается, как</p>
-          <b id="weather-result-feels-p"></b>
-        </div> */
+.my-cities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-city {
+  text-align: center;
+}
+
+.add-city button {
+  margin-top: 10px;
+  padding: 15px 30px;
+
+  border: 1px solid black;
+  border-radius: 15px;
+  background: white;
+}
+
+.cities-list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px;
+  padding: 20px;
+
+  border-radius: 20px;
+  margin-bottom: 0;
+  background: white;
+}
+
+.city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.cities-list b {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.cities-list p {
+  font-size: 20px;
+}
+
+.weather-right {
+  font-size: 20px;
+}
