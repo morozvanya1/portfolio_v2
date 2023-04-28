@@ -6,6 +6,7 @@ import {
   faAngleLeft,
   faSearch,
   faAngleRight,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Weather() {
@@ -14,6 +15,13 @@ function Weather() {
       ? []
       : JSON.parse(localStorage.getItem("cities"))
   );
+
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    var hf = document.getElementsByTagName("footer")[0].offsetTop + "px";
+    document.getElementsByClassName("Weather")[0].style.height = hf;
+  }, [ref]);
 
   function getWeather() {
     const q = document.getElementById("city").value;
@@ -51,8 +59,25 @@ function Weather() {
     setCities(list);
   }
 
+  function deleteCity(v) {
+    var list =
+      localStorage.getItem("cities") === null
+        ? []
+        : JSON.parse(localStorage.getItem("cities"));
+    var arr = [];
+    var index = 0;
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] !== v) {
+        arr[index] = list[i];
+        index++;
+      }
+    }
+    localStorage.setItem("cities", JSON.stringify(arr));
+    setCities(arr);
+  }
+
   return (
-    <div className="Weather">
+    <div className="Weather" ref={ref}>
       <Header d={"Погода"} ic={[faAngleLeft]} l={"/"} />
 
       <div className="weather-header">
@@ -64,21 +89,6 @@ function Weather() {
         />
       </div>
 
-      <div className="my-cities">
-        <div className="add-city">
-          <button onClick={() => addCity()}>Добавить город</button>
-        </div>
-        <div className="cities-list">
-          <b>Избранные города:</b>
-          {cities.map((v, k) => (
-            <div className="city" key={k} onClick={() => changeCity(v)}>
-              <p>{v}</p>
-              <FontAwesomeIcon icon={faAngleRight} className="weather-right" />
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="weather-results">
         <div className="weather-result-temp">
           <p>Погода на сегодня:</p>
@@ -87,6 +97,30 @@ function Weather() {
         <div className="weather-result-temp" id="weather-result-feels-like">
           <p>Ощущается, как:</p>
           <b id="weather-result-feels-p"></b>
+        </div>
+      </div>
+
+      <div className="my-cities">
+        <div className="add-city">
+          <button onClick={() => addCity()}>Добавить город</button>
+        </div>
+        <div className="cities-list">
+          <b>Избранные города:</b>
+          {cities.map((v, k) => (
+            <div className="city" key={k}>
+              <FontAwesomeIcon
+                icon={faXmark}
+                className="weather-close"
+                onClick={() => deleteCity(v)}
+              />
+              <p onClick={() => changeCity(v)}>{v}</p>
+              <FontAwesomeIcon
+                icon={faAngleRight}
+                className="weather-right"
+                onClick={() => changeCity(v)}
+              />
+            </div>
+          ))}
         </div>
       </div>
 
