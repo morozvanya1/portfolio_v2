@@ -13,11 +13,8 @@ function Card() {
   const d = location.state === null ? "" : location.state.d;
   const all = location.state === null ? "" : location.state.all;
   const h = location.state === null ? "" : location.state.h;
-  console.log(h);
-  console.log(all);
 
   function openDesc() {
-    console.log('hello');
     var hidden = document.getElementsByClassName("card-desc-body-hidden")[0].style.display;
     console.log(hidden)
     if (hidden !== "none") {

@@ -1,6 +1,5 @@
-import "./App.css";
-import Footer from "../components/Footer";
-import Item from "../components/Item";
+import "../css/App.css";
+import {Footer, Item} from "../components/index"
 import { faShirt, faVanShuttle } from "@fortawesome/free-solid-svg-icons";
 
 function App() {

@@ -1,14 +1,8 @@
-import "./Wardrobe.css";
 import React from "react";
-import Footer from "../components/Footer";
+import "../css/Wardrobe.css";
+import { Footer, Item, Header } from "../components/index";
 import { faBagShopping, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import tshirt from "../img/tshirt.png";
-import sweatpants from "../img/sweatpants.png";
-import shorts from "../img/shorts.png";
-import jacket from "../img/jacket.png";
-import accessories from "../img/accessories.png";
-import Item from "../components/Item";
-import Header from "../components/Header";
+import { tshirt, sweatpants, shorts, jacket, accessories } from "../img/index";
 
 function Wardrobe() {
   const iMenu = ["Основное", "Желаемое"];
@@ -22,11 +16,7 @@ function Wardrobe() {
 
   return (
     <div className="Wardrobe" ref={ref}>
-      <Header 
-        d={"Категории"}
-        ic={[faAngleLeft, faBagShopping]}
-        l={"/"}
-      />
+      <Header d={"Категории"} ic={[faAngleLeft, faBagShopping]} l={"/"} />
 
       <div className="categories">
         <div className="categories-item">

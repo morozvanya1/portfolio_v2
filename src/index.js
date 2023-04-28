@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./pages/App";
-import "./index.css";
+import "./css/index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Wardrobe from "./pages/Wardrobe";
-import Content from "./pages/Content";
-import Card from "./components/Card";
+import { Card } from "./components/index";
+import { Wardrobe, Content, App } from "./pages/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

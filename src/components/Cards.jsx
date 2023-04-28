@@ -7,8 +7,6 @@ import {
 import { Link } from 'react-router-dom';
 
 function Cards({ d, h }) {
-    console.log(h);
-
     return (
         <div className="content-items">
             {d && d.map((v, k) => (
