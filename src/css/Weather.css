@@ -46,6 +46,13 @@
   justify-content: center;
 }
 
+.weather-result-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+}
+
 .weather-result-temp {
   display: flex;
   flex-direction: row;
@@ -85,6 +92,9 @@
   border: 1px solid black;
   border-radius: 15px;
   background: white;
+  
+  color: black;
+  cursor: pointer;
 }
 
 .cities-list {

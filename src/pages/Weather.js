@@ -8,6 +8,7 @@ import {
   faAngleRight,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+import { sun, cloudy, rain, storm, snowy, mist } from "../img/index";
 
 function Weather() {
   const [cities, setCities] = React.useState(
@@ -31,9 +32,29 @@ function Weather() {
       resp.json().then((resp) => {
         const temp = Math.ceil(resp.main.temp) + " °C";
         const feels = Math.ceil(resp.main.feels_like) + " °C";
+        const main = resp.weather[0].main;
         console.log(resp);
         console.log("Погода - " + Math.ceil(resp.main.temp));
         console.log("Ощущается, как - " + Math.ceil(resp.main.feels_like));
+        console.log("Тип - " + resp.weather[0].main);
+        document.getElementsByClassName("weather-result-icon")[0].src =
+          main === "Clear"
+            ? sun
+            : main === "Clouds"
+            ? cloudy
+            : main === "Atmosphere"
+            ? mist
+            : main === "Snow"
+            ? snowy
+            : main === "Rain"
+            ? rain
+            : main === "Drizzle"
+            ? rain
+            : main === "Thunderstorm"
+            ? storm
+            : (document.getElementsByClassName(
+                "weather-result-icon"
+              )[0].style.display = "none");
         document.getElementById("weather-result-temp").innerHTML = temp;
         document.getElementById("weather-result-feels-p").innerHTML = feels;
         document.getElementsByClassName("weather-results")[0].style.display =
@@ -49,10 +70,16 @@ function Weather() {
 
   function addCity() {
     const q = document.getElementById("city").value;
+    if (q === "") return;
     var list =
       localStorage.getItem("cities") === null
         ? []
         : JSON.parse(localStorage.getItem("cities"));
+    for (var i = 0; i < list.length; i++) {
+      if (list[i] === q) {
+        return;
+      }
+    }
     list[list.length] = q;
     console.log(list);
     localStorage.setItem("cities", JSON.stringify(list));
@@ -90,6 +117,7 @@ function Weather() {
       </div>
 
       <div className="weather-results">
+        <img alt="weather-icon" className="weather-result-icon" />
         <div className="weather-result-temp">
           <p>Погода на сегодня:</p>
           <b id="weather-result-temp"></b>
