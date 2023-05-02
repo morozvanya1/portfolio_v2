@@ -2,16 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faHouse,
-    faBus,
     faShirt,
     faRightFromBracket,
-    faCloud
+    faListCheck
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 
 function Footer() {
-    const links = ['/', '/wardrobe', '/routes', '/weather', '/exit'];
-    const icons = [faHouse, faShirt, faBus, faCloud, faRightFromBracket];
+    const links = ['/', '/wardrobe', '/others', '/exit'];
+    const icons = [faHouse, faShirt, faListCheck, faRightFromBracket];
 
     React.useEffect(() => {
         const path = window.location.pathname;

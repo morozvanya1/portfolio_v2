@@ -1,6 +1,6 @@
 import "../css/App.css";
-import {Footer, Item} from "../components/index"
-import { faShirt, faVanShuttle } from "@fortawesome/free-solid-svg-icons";
+import { Footer, Item } from "../components/index";
+import { faShirt, faListCheck } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       </header>
 
       <Item
-        d={["Гардероб;Список вещей", "ЦДС Вятка;Расписание автобусов"]}
-        ic={[faShirt, faVanShuttle]}
-        l={["/wardrobe", "/routes"]}
+        d={["Гардероб;Список вещей", "Прочее;Все остальное"]}
+        ic={[faShirt, faListCheck]}
+        l={["/wardrobe", "/others"]}
       />
 
       <Footer />

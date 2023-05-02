@@ -105,7 +105,7 @@ function Weather() {
 
   return (
     <div className="Weather" ref={ref}>
-      <Header d={"Погода"} ic={[faAngleLeft]} l={"/"} />
+      <Header d={"Погода"} ic={[faAngleLeft]} l={"/others"} />
 
       <div className="weather-header">
         <input type="text" placeholder="Укажите город" id="city" />
