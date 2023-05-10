@@ -65,6 +65,8 @@ function Currency() {
         ))}
       </div>
 
+      {/* <Load /> */}
+
       <Footer />
     </div>
   );
